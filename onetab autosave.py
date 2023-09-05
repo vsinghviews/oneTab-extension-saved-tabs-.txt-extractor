@@ -3,34 +3,48 @@ import time
 import os
 import pyperclip
 
-onetabbutton = pyautogui.locateCenterOnScreen('d:\\desktop\windowsave.png', confidence = 0.9)
+#Opening onetab user interface
+onetabbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\onetabbutton.png', confidence=0.9)
 print(onetabbutton)
 pyautogui.moveTo(onetabbutton)
 pyautogui.rightClick(onetabbutton)
-pyautogui.moveTo((1789, 104), duration=1)
-pyautogui.click((1525, 120), duration=1)
+
+dropdownbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\onetabdropdown.png', confidence=0.5)
+pyautogui.moveTo(dropdownbutton)
+print(dropdownbutton)
 
 time.sleep(5)
 
-eibutton = pyautogui.locateCenterOnScreen('d:\\desktop\exportimportURLs.png', confidence = 0.5)
-print(eibutton)
-pyautogui.moveTo((eibutton), duration=1)
-pyautogui.click(eibutton)
+displaydropdownbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\displayonetab drop down.png', confidence=0.4)
+pyautogui.moveTo(displaydropdownbutton)
+print(onetabbutton)
+pyautogui.click(displaydropdownbutton)
 
-exportURLsbutton = pyautogui.locateCenterOnScreen('d:\\desktop\exportURLs button.png', confidence = 0.9)
+#Pausing state so that the export button can be found
+time.sleep(5)
+
+#Opening saved tabs .txt list
+exportimportbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\exportimportURLs.png', confidence=0.9)
+print(exportimportbutton)
+pyautogui.moveTo((exportimportbutton), duration=0.5)
+pyautogui.click(exportimportbutton)
+
+#Locating saved tabs
+exportURLsbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\exportURLs button.png', confidence = 0.9)
 print(exportURLsbutton)
 pyautogui.moveTo((exportURLsbutton), duration=1)
 pyautogui.click(exportURLsbutton)
 
-exportBox = pyautogui.locateCenterOnScreen('d:\\desktop\exportBox.png', confidence = 0.9)
-print(exportBox)
-pyautogui.click(exportBox)
+#Exporting saved tabs to notepad to be saved as file
+txtBox = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\exportBox.png', confidence = 0.9)
+print(txtBox)
+pyautogui.click(txtBox)
 pyautogui.hotkey('ctrl', 'a')
 pyautogui.hotkey('ctrl', 'c')
 
 time.sleep(5)
 
-filename = "example.txt"
+filename = "Overload.txt"
 counter = 1
 
 while os.path.exists(filename):
