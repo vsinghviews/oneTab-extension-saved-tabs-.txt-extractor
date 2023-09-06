@@ -8,17 +8,8 @@ onetabbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\image
 print(onetabbutton)
 pyautogui.moveTo(onetabbutton)
 pyautogui.rightClick(onetabbutton)
-
-dropdownbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\onetabdropdown.png', confidence=0.5)
-pyautogui.moveTo(dropdownbutton)
-print(dropdownbutton)
-
-time.sleep(5)
-
-displaydropdownbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\displayonetab drop down.png', confidence=0.4)
-pyautogui.moveTo(displaydropdownbutton)
-print(onetabbutton)
-pyautogui.click(displaydropdownbutton)
+pyautogui.moveTo((1789, 104), duration=1)
+pyautogui.click((1525, 120), duration=1)
 
 #Pausing state so that the export button can be found
 time.sleep(5)
@@ -32,7 +23,7 @@ pyautogui.click(exportimportbutton)
 #Locating saved tabs
 exportURLsbutton = pyautogui.locateCenterOnScreen('d:\\desktop\\usb\\overload\\images\\exportURLs button.png', confidence = 0.9)
 print(exportURLsbutton)
-pyautogui.moveTo((exportURLsbutton), duration=1)
+pyautogui.moveTo((exportURLsbutton), duration=0.5)
 pyautogui.click(exportURLsbutton)
 
 #Exporting saved tabs to notepad to be saved as file
@@ -48,7 +39,7 @@ filename = "Overload.txt"
 counter = 1
 
 while os.path.exists(filename):
-    filename = f"example.{counter}.txt"
+    filename = f"Overload.{counter}.txt"
     counter += 1
 
 with open(filename, "w", encoding="utf-8") as newfile:
