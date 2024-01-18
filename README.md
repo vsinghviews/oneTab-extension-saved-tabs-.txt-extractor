@@ -40,8 +40,8 @@ useful because, I could now store, save, share my tabs as well as re-upload them
   
 # Improvments that can be made
 
-- 1. Having everything done by finding images alone, instead of using mouse locations but I encountered problems doing so. May try again to solve why this issue is occuring or images not being found.
-+ Fixed this by tinkering with the pixel parameters to ensure the confidence level matches that of the image found. 
+ ~~1. Having everything done by finding images alone, instead of using mouse locations but I encountered problems doing so. May try again to solve why this issue is occuring or images not being found.~~
+ Fixed this by tinkering with the pixel parameters to ensure the confidence level matches that of the image found. 
 2. As I am using a dual monitor setup, figure out why Pyautogui priortizies one monitor over the other and if it finds the first prompt image on the second monitor to run the program as normal. This may be a simple fix as just finding the location of
    my mouse on the second monitor and implmenting "try" and or "else" statements.
 3. Have the program automatically run at set schedules, by the time you are reading this I may have already implmented this on my own system using Windows Tasks Schedular.
